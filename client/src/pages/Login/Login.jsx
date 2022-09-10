@@ -15,6 +15,7 @@ const Login = () => {
     });
 	const dispatch = useDispatch();
     const validated = useSelector(state => state.users.userValidate)
+    console.log(input + '========> General')
 	///FALTA INVESTIGAR COMO OBTENER EL EMAIL DEL USER DE GOOGLE
 	// dispatch(getTodosUsuarios());
 	// const userValidate = users.find((e) => e.name === user.displayName);
@@ -28,7 +29,7 @@ const handleChange = (e) => {
 const handleSubmit = (e) => {
     e.preventDefault()
     dispatch(usersValidate(input))
-    console.log(validated)
+    console.log(input + '========> ONSubmit')
     
 
 }

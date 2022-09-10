@@ -18,7 +18,7 @@ import CreateVideo from './components/Teacher/CreateVideo';
 import UpdateClass from './components/Teacher/UpdateClass';
 import Module from "./pages/Module/Module";
 
-const URL = 'http://students-henry.herokuapp.com'
+const URL = 'https://students-henry.herokuapp.com'
 function App() {
 	const [user, setUser] = useState({});
 
