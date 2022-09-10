@@ -3,7 +3,7 @@ import Google from '../../assets/google.png';
 import GitHub from '../../assets/github.png';
 import './login.css'
 
-const URL = 'https://students-henry.herokuapp.com'
+const URL = 'http://students-henry.herokuapp.com'
 const Login = () => {
 
 const google = () => {
