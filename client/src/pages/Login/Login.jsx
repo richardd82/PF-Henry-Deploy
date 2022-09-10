@@ -7,10 +7,10 @@ const URL = 'https://students-henry.herokuapp.com'
 const Login = () => {
 
 const google = () => {
-    window.open("https://students-henry.herokuapp.com/auth/google", "_self");
+    window.open(URL +"/auth/google", "_self");
 }
 const github = () => {
-    window.open("https://students-henry.herokuapp.com/auth/github", "_self");
+    window.open(URL +"/auth/github", "_self");
 }
 
 

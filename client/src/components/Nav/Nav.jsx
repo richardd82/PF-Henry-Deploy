@@ -15,7 +15,7 @@ export default function Nav({ user }) {
 	// console.log(obj[0].photos[0].value);
 	// console.log(obj + "********************************************");
 	const logout = () => {
-		window.open("https://students-henry.herokuapp.com/auth/logout", "_self");
+		window.open(URL + "/auth/logout", "_self");
 	};
 
 	return (
