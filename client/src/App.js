@@ -24,7 +24,7 @@ function App() {
 
 	useEffect(() => {
 		const getUser = () => {
-			fetch("https://students-henry.herokuapp.com/auth/login/success", {
+			fetch(URL + "/auth/login/success", {
 				method: "GET",
 				credentials: "include",
 				headers: {
