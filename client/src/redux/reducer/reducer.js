@@ -23,6 +23,7 @@ import {
 	CLEAR_STATE_VIDEOS,
 	CLEAR_STATE_LESSONS,
 	CLEAR_STATE_MODULES,
+	USER_VALIDATE,
 } from "../actions/index";
 
 const initialState = {
@@ -48,6 +49,7 @@ const initialState = {
 	users: [],
 	teachers: [],
 	allUsers: [],
+	userValidate: [],
 
 	//Videos
 	videos: [],
@@ -161,7 +163,11 @@ export function users(state = initialState, action) {
 			return {
 				...state,
 			};
-
+		case USER_VALIDATE:
+			return {
+				...state,
+				userValidate: action.payload,
+			};
 		default:
 			return { ...state };
 	}
@@ -191,11 +197,11 @@ export function videos(state = initialState, action) {
 				...state,
 				videos: action.payload,
 			};
-		case GET_VIDEOS_BY_ID:			
+		case GET_VIDEOS_BY_ID:
 			return {
 				...state,
 				detailVideos: action.payload,
-			};			
+			};
 		case CLEAR_STATE_VIDEOS:
 			return {
 				...state,

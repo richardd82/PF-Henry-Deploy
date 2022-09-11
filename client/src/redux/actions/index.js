@@ -23,6 +23,7 @@ export const GET_VIDEOS_BY_ID = "GET_VIDEOS_BY_ID";
 export const CLEAR_STATE_VIDEOS = "CLEAR_STATE_VIDEOS";
 export const CLEAR_STATE_LESSONS = "CLEAR_STATE_LESSONS";
 export const CLEAR_STATE_MODULES = "CLEAR_STATE_MODULES";
+export const USER_VALIDATE = "USER_VALIDATE";
 
 const URL = "https://students-henry.herokuapp.com";
 
@@ -247,6 +248,15 @@ export function postNewUser(payload) {
 		return json;
 	};
 }
+export function usersValidate(payload){
+    return async function (dispatch){
+      var json = await axios.post(URL +`/users/byEmail`, payload);
+      return  dispatch({
+        type: USER_VALIDATE,
+        payload: json.data,
+      });            
+    }
+  }
 //*********************Stand Ups**************************
 export function getAllStandUps() {
 	return async function (dispatch) {
