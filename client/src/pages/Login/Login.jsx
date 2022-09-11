@@ -38,10 +38,10 @@ const Login = () => {
 
 
 const google = () => {
-    window.open(URL +"/auth/google/callback", "_self");
+    window.open(URL +"/auth/google", "_self");
 }
 const github = () => {
-    window.open(URL +"/auth/github/callback", "_self");
+    window.open(URL +"/auth/github", "_self");
 }
 
 
